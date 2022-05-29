@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin:0; padding:0;}
+    a{
+      text-decoration: none;
+      font-size: 80px;
+      font-weight: bold;
+      position: relative;
+      color: #f0f0f0;
+    }
+    a:after{
+      content:'About Us';
+      display:block;
+      position: absolute; 
+      left:0; top:0; 
+      color: blue; 
+      width: 0;
+      white-space:nowrap;
+      overflow:hidden;
+      transition:.2s ease-in;
+    }
+    a:hover:after{
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+   <div>
+      <a href="/">About Us</a>
+   </div>
+</body>
+</html>

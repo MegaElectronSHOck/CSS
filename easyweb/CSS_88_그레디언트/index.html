@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 하위호환시 color zilar gradient 활용*/
+        .box{
+            width: 300px; height:300px;
+            border:1px solid #ccc;
+            margin: 20px auto;
+        }
+        /* linear */
+        .linear_1{
+            /*background: linear-gradient(방향, 색상 위치, 색상 위치); */
+            background : linear-gradient(to bottom, #000 0%, #fff 30%, #fff 60%, #000 100%);
+        }
+        .linear_2{
+            /*background: linear-gradient(방향, 색상 위치, 색상 위치); */
+            background : linear-gradient(45deg, #000 0%, #fff 30%, #fff 60%, #000 100%);
+        }
+        .linear_3{
+            /*background: linear-gradient(방향, 색상 위치, 색상 위치); */
+            background : linear-gradient(45deg, #2989cc 0%, #fff 50%, #906a00 52%, #d99f00 64%, #fff 100%);
+        }
+        .linear_3{
+            /* 같으면 생략 가능, 방향이 아래쪽이면 생략가능*/
+            background : linear-gradient( #2989cc 20%, #fff 20%, #fff 80%, #2989cc 80%);
+        }
+        .linear_4{
+            /* 색상이 2개뿐이라면 %도 생략가능*/
+            background : linear-gradient( #2989cc, #fff);
+        }
+        .linear_5{
+            /* 20% 까지 반복*/
+            background : repeating-linear-gradient( #2989cc, #fff 20%);
+        }
+
+        /* radial */
+        
+        .radial_1{
+            height: 200px;
+            /* background: radial-gradient(ellipse at center (가운데에서 바깥쪽으로 타원형으로 만들어라), 색상 위치, 색상 위치 ) */
+            background : radial-gradient(ellipse at center, #2989cc, #fff);
+        }
+        .radial_2{
+            /* background: radial-gradient(ellipse at center (가운데에서 바깥쪽으로 정원형으로 만들어라), 색상 위치, 색상 위치 ) */
+            height:200px;
+            background : radial-gradient(circle at center, #2989cc, #fff );
+        }
+        .radial_3{
+            /*  50px 50px를 중심으로 정원*/
+            height:200px;
+            background : radial-gradient(circle at 50px 50px, #2989cc, #fff );
+        }
+        .radial_4{
+            /*  원의 끝을 가장 먼 코너에 맞춘다*/
+            /* closest-corner : 가장 가까운 , farthest-side : 가장 먼 옆면 까지, closest-side: 가장 가까운 옆면 까지 */
+            height:200px;
+            background : radial-gradient(circle farthest-corner at 50px 50px, #2989cc, #fff );
+        }
+    </style>
+</head>
+<body>
+    <h1>gradient</h1>
+    <div class="box linear_1">
+        linear gradient
+    </div>
+    <div class="box linear_2">
+        linear gradient
+    </div>
+    <div class="box linear_3">
+        linear gradient
+    </div>
+    <div class="box linear_4">
+        linear gradient
+    </div>
+    <div class="box linear_5">
+        linear gradient
+    </div>
+    <div class="box radial_1">
+        radial gradient
+    </div>
+    <div class="box radial_2">
+        radial gradient
+    </div>
+    <div class="box radial_3">
+        radial gradient
+    </div>
+    <div class="box radial_4">
+        radial gradient
+    </div>
+</body>
+</html>

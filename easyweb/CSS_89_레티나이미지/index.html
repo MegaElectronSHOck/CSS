@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .photo{
+            width: 240px;
+            height: 200px;
+            background-image:url(img/photo-240.jpg);
+            background-repeat: no-repeat;
+            text-indent:-9999em;
+        }
+        /* @media screen and (-webkit-min-device-pixel-ratio:2){ 구형 방법
+            .photo{
+                background-image:url(img/photo-480.png);
+            }
+        } */
+       @media screen and (min-resolution:2dppx){ /* 최신 방법 (추천) */
+            .photo{
+                background-image:url(img/photo-480.png);
+            }
+        } 
+    </style>
+</head>
+<body>
+    <p class="photo">photo </p>
+</body>
+</html>
